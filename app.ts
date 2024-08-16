@@ -12,8 +12,8 @@ app.register(customFieldsRoutes);
 // Sync database and start server
 (async () => {
     try {
-        await sequelize.sync(); // Sync models with database
-        await app.listen(3000); // Start Fastify server
+        await sequelize.sync();
+        await app.listen(3000);
         console.log('Server is running on http://localhost:3000');
     } catch (error) {
         console.error('Unable to connect to the database:', error);

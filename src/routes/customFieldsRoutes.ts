@@ -3,13 +3,9 @@ import { getCustomFields, getCustomFieldsById, createCustomFields, updateCustomF
 
 async function customFieldsRoutes(fastify: FastifyInstance) {
     fastify.get('/user', getCustomFields);
-
     fastify.get('/user/:id', getCustomFieldsById);
-
     fastify.post('/user', createCustomFields);
-
     fastify.put('/user/:id', updateCustomFields);
-
     fastify.delete('/user/:id', deleteCustomFields);
 }
 
